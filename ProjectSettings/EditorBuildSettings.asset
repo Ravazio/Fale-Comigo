@@ -26,4 +26,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SchoolHall.unity
     guid: 5a417e4d6ab19054ca2cf1183dccc340
+  - enabled: 1
+    path: Assets/Scenes/SchoolCourtStart.unity
+    guid: dabf56fa9534ac84d8c3c316743b5984
+  - enabled: 1
+    path: Assets/Scenes/PlatformOne.unity
+    guid: f621354ebf1df0049884091b410f892f
+  - enabled: 1
+    path: Assets/Scenes/PlatformTwo.unity
+    guid: 109623903ed4c1d40a02c5991dcc8c6c
+  - enabled: 1
+    path: Assets/Scenes/PlatformThree.unity
+    guid: e8cd2481422d3b64a8851d86b6c1907e
+  - enabled: 1
+    path: Assets/Scenes/SchoolCourtEnd.unity
+    guid: ce5f67e884aee12438c4a3a917f5d47c
+  - enabled: 1
+    path: Assets/Scenes/SchoolYard.unity
+    guid: 6705352039e83ee439631ded16f13f3d
+  - enabled: 1
+    path: Assets/Scenes/HouseSceneEnd.unity
+    guid: f689c03382ec8db49a82c73a4e852b22
+  - enabled: 1
+    path: Assets/Scenes/FaleComigoScene.unity
+    guid: e2b4032e4c4599c4785f6eb2891803b3
+  - enabled: 1
+    path: Assets/Scenes/CreditsScene.unity
+    guid: 44ab26603564b964996e8900124ff7f5
   m_configObjects: {}

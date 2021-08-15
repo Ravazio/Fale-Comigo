@@ -2,14 +2,12 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour   
 {
-    private GameObject soundtrack;
     public LevelLoaderScript levelLoader;
 
     public void PlayGame()
     {
         levelLoader.LoadNextLevel();
-        soundtrack = GameObject.FindGameObjectWithTag("Soundtrack");
-        Destroy(soundtrack);
+        Destroy(GameObject.FindGameObjectWithTag("Soundtrack"));
     }
 
     public void QuitGame()

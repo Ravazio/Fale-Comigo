@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4052109647611418547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4052109647611418548}
+  - component: {fileID: 4052109647611418549}
+  m_Layer: 0
+  m_Name: AbstractDialogue-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &4052109647611418548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052109647611418547}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.91904753, y: -0.50209755, z: 39.119553}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4052109647611418549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4052109647611418547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40396f7f00590444984128836dc5c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "\u053F\u0561\u057C\u056C\u0578\u057D"
+    sentences:
+    - "\u053B\u0570\u0561\u0580\u056F\u0565, \u0561\u0575\u0576 \u0571\u0561\u056D
+      \u056F\u0578\u0572\u0574\u0578\u0582\u0574 \u0567."
+    color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
+    photo: {fileID: 21300000, guid: e17f492d04a0ed74bb7a7db279162578, type: 3}
+    hasNext: 1
+    isLast: 0
+    nextDialogue: {fileID: 0}

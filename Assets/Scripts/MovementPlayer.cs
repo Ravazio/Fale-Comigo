@@ -26,6 +26,8 @@ public class MovementPlayer : MonoBehaviour
         Vector3 horizontal = new Vector3(Input.GetAxis("Horizontal"), 0.0f, 0.0f);
         transform.position = transform.position + horizontal * Time.deltaTime * speed;
 
+        interactableIcon.transform.position = new Vector2(transform.position.x,transform.position.y + 3f);
+
         if (Input.GetKeyDown(KeyCode.F))
         {
             CheckInteraction();

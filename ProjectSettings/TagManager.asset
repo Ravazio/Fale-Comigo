@@ -7,6 +7,12 @@ TagManager:
   - Soundtrack
   - DialogueSound
   - Background
+  - DialogueBox
+  - PickUp
+  - Person
+  - InteractableIcon
+  - PickUpsScore
+  - MovingPlataform
   layers:
   - Default
   - TransparentFX
@@ -16,7 +22,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 

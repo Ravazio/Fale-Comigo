@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour
     public bool hasNext;
     public bool isLast;
 
+    public bool faleComigo;
+
     private GameObject nextDialogue;
     public LevelLoaderScript levelLoader;
 
@@ -32,7 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        Debug.Log("Starting conversation with " + dialogue.name);
+        Debug.Log("Começando conversa com " + dialogue.name);
 
         animator.SetBool("IsOpen", true);
 
@@ -44,7 +46,6 @@ public class DialogueManager : MonoBehaviour
         hasNext = dialogue.hasNext;
         isLast = dialogue.isLast;
         nextDialogue = dialogue.nextDialogue;
-
         sentences.Clear();
 
         foreach (string sentence in dialogue.sentences)
@@ -57,7 +58,6 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        Debug.Log(sentences.Count);
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -74,18 +74,26 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-
+        
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+
         //dialogueText.text = sentence;
     }
 
     IEnumerator TypeSentence(string sentence)
     {
-        AudioManager.instance.SpeakWordsOnLoop();
+        if (!faleComigo)
+        {
+            AudioManager.instance.SpeakWordsOnLoop();
+        }
         dialogueText.text = "";
         foreach(char letter in sentence.ToCharArray())
         {
+            if (faleComigo)
+            {
+                AudioManager.instance.BipSound();
+            }
             dialogueText.text += letter;
             yield return new WaitForSeconds(transitionTime);
         }
@@ -94,7 +102,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        Debug.Log("End of conversation");
+        Debug.Log("Fim de conversa");
 
         animator.SetBool("IsOpen", false);
     }

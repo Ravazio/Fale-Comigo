@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public bool StillSpeaking = false;
-    static AudioSource audioSrc;
+    public static AudioSource audioSrc;
     public static AudioManager instance;
 
     // Start is called before the first frame update
@@ -43,5 +43,16 @@ public class AudioManager : MonoBehaviour
                 yield return null;
             }
         }
+    }
+
+    public void BipSound()
+    {
+        StartCoroutine(BipSoundRoutine());
+    }
+
+    IEnumerator BipSoundRoutine()
+    {
+        audioSrc.Play();
+        yield return null;
     }
 }

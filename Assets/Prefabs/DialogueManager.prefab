@@ -51,6 +51,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   hasNext: 0
   isLast: 0
+  faleComigo: 0
   levelLoader: {fileID: 0}
   transitionTime: 0.05
 --- !u!114 &8384765564084785490
@@ -78,7 +79,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 548e1b543e4c4eb4098d9f84351b4667, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.066
+  m_Volume: 0.04
   m_Pitch: 1
   Loop: 0
   Mute: 0

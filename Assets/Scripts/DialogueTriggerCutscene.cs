@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class DialogueTriggerCutscene : MonoBehaviour
 {
-
+    public float speed = 1f;
     public Dialogue dialogue;
-    private FunctionTimer functionTimer;
     private void Start(){
-        FunctionTimer.Create(TriggerDialogue, 1f);
+        FunctionTimer.Create(TriggerDialogue, speed);
     }
     public void TriggerDialogue(){
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);

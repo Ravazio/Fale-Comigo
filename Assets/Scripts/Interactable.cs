@@ -8,13 +8,13 @@ public abstract class Interactable : MonoBehaviour
         GetComponent<BoxCollider2D>().isTrigger = true;
     }
     // O quão próximo o Player tem que estar do objeto para interagir com ele
-    public float radius = 1f;
+    //public float radius = 1f;
 
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, radius);
-    }
+    //void OnDrawGizmosSelected()
+    //{
+    //    Gizmos.color = Color.yellow;
+    //    Gizmos.DrawWireSphere(transform.position, radius);
+    //}
 
     public abstract void Interact();
 
@@ -22,7 +22,7 @@ public abstract class Interactable : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<MovementPlayer>().OpenInteractableIcon();
+            collision.GetComponent<PlayerController2D>().OpenInteractableIcon();
         }
     }
 
@@ -30,7 +30,7 @@ public abstract class Interactable : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<MovementPlayer>().CloseInteractableIcon();
+            collision.GetComponent<PlayerController2D>().CloseInteractableIcon();
         }
     }
 }
